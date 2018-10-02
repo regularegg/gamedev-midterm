@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour {
 	private Rigidbody RB;
 	private Vector3 inputVector;
 
-	private bool faceRight, onGround = true, canTakePic;
+	private bool faceRight, onGround = true;
 
 	public float moveSpeed = 10f;
 	public float jump = 1000f;
@@ -63,10 +63,6 @@ public class PlayerMovement : MonoBehaviour {
 			RB.AddForce(Vector3.down*0.5f);
 		}
 
-		if (Input.GetKey(KeyCode.Space)&&canTakePic)
-		{
-			//take pic code
-		}
 	}
 
 	private void OnCollisionEnter(Collision other)
@@ -80,11 +76,6 @@ public class PlayerMovement : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other)
 	{
-		//lets player "take pic" at scenic spot
-		if (other.CompareTag("CamPoint"))
-		{
-			canTakePic = true;
-		}
 		//for later when I add the trigger boxes
 		if (other.CompareTag("Ground"))
 		{
@@ -92,12 +83,5 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
-	private void OnTriggerExit(Collider other)
-	{
-		//stops player from taking pic if they exit the scenic spot
-		if (other.CompareTag("CamPoint"))
-		{
-			canTakePic = false;
-		}	
-	}
+	
 }
