@@ -7,12 +7,13 @@ using UnityEngine.UI;
 public class TimeKeeper : MonoBehaviour
 {
 	public Text timeDisplay;
-	public int time, penalty;
+	public int time = 60, penalty;
 	
 	// Use this for initialization
 	void Start ()
 	{
 		timeDisplay.text = "Time: " + time;
+		StartCoroutine(Countdown());
 	}
 	
 	// Update is called once per frame
@@ -23,9 +24,12 @@ public class TimeKeeper : MonoBehaviour
 	//counts down the seconds
 	IEnumerator Countdown()
 	{
+		Debug.Log( "Coroutine started");
 		while (time>0)
 		{
+			Debug.Log("waiting");
 			time--;
+			timeDisplay.text = "Time: " + time;
 			yield return new WaitForSeconds(1);
 		}
 

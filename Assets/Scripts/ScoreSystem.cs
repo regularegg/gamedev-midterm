@@ -13,6 +13,7 @@ public class ScoreSystem : MonoBehaviour
 	
 	private int currentDestination, score;
 	private bool canTakePic;
+	private GameObject otherObject;
 
 	// Use this for initialization
 	void Start()
@@ -33,6 +34,8 @@ public class ScoreSystem : MonoBehaviour
 			ScoreDisplay.text = "Score: " + score;
 			destinations[currentDestination] = true;
 			Debug.Log("Took pic!!!");
+			otherObject.GetComponent<MeshRenderer>().enabled = false;
+			otherObject.GetComponent<Collider>().enabled = false;
 		}
 	}
 
@@ -44,6 +47,7 @@ public class ScoreSystem : MonoBehaviour
 			canTakePic = true;
 			currentDestination = int.Parse(other.name);
 			Debug.Log("Campoint is ok! can take pic!");
+			otherObject = other.gameObject;
 		}
 	}
 
@@ -55,6 +59,7 @@ public class ScoreSystem : MonoBehaviour
 			canTakePic = false;
 			currentDestination = -1;
 			Debug.Log("left campoint :c");
+			otherObject = null;
 		}
 	}
 }
