@@ -10,11 +10,13 @@ public class PlayerMovement : MonoBehaviour {
 	private Rigidbody RB;
 	private Vector3 inputVector;
 
-	private bool faceRight, onGround = true, canMove = true;
+	private bool faceRight, onGround = true, canMove = true, keyPressed;
 
 	public float moveSpeed = 10f;
-	public float jump = 1000f;
+	public float jump = 100f;
 	public float maxSpeed = 2f;
+
+	public PhysicMaterial slipperyMaterial;
 	
 	// Use this for initialization
 	void Start ()
@@ -31,22 +33,38 @@ public class PlayerMovement : MonoBehaviour {
 		//inputVector  = transform.up * vertical *  jump;
 		inputVector = transform.right * horizontal *  moveSpeed;
 		
+		if (Mathf.Abs((RB.velocity.x))<0.01f)
+		{
+			canMove = true;
+		}
 		
 	}
 	
 	private void FixedUpdate()
 	{
 		//can use coded acceleration!!! < figure out later
-		if ((Input.GetKey(KeyCode.A) || Input.GetKey((KeyCode.D)))&&canMove)
+		//if ((Input.GetKey(KeyCode.A) || Input.GetKey((KeyCode.D)))&&canMove)
+		if ((Mathf.Abs(Input.GetAxis("Horizontal"))>0.1f)&&canMove)
 		{
 			//cha9nge velocity to make guy move
-			//RB.velocity = Vector3.ClampMagnitude(Vector3.right*Input.GetAxis("Horizontal")*moveSpeed,maxSpeed)+(Vector3.up*RB.velocity.y);
 			RB.AddForce(inputVector);
+			
+			//if velocity.x exceeds maxspeed, change artificially edit velocity.x to maxspeed
 			if ((RB.velocity.x > maxSpeed)||(RB.velocity.x<-maxSpeed))
 			{
 				RB.velocity = new Vector3(maxSpeed*Input.GetAxis("Horizontal"),RB.velocity.y,0f);
 			}
-			//RB.velocity = Vector3.ClampMagnitude(RB.velocity, maxSpeed);
+
+			if (Input.GetKey(KeyCode.A))
+			{
+				faceRight = false;
+			}
+			else if (Input.GetKey(KeyCode.D))
+			{
+				faceRight = true;
+			}
+
+			
 		}
 		else if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D)&&onGround)
 		{
@@ -54,9 +72,11 @@ public class PlayerMovement : MonoBehaviour {
 			//Really weird w/ jumps right now
 			//maybe lerp for more realistic stop??
 			
-			//RB.velocity = Vector3.right * Mathf.Lerp(RB.velocity.y,0,0.1f);
+			RB.velocity = Vector3.right * Mathf.Lerp(RB.velocity.y,0,0.1f);
 			
-			
+			//RB.velocity = Vector3.right * -RB.velocity.x;
+			//RB.AddForce(-RB.velocity);
+
 		}
 
 		if (Input.GetKeyDown(KeyCode.W)&&onGround)
@@ -64,6 +84,8 @@ public class PlayerMovement : MonoBehaviour {
 			//try adding velocity directly for jump
 			//when hit ground on side, set x velocity to 0 or deactivate jump controls
 			//add force to jump
+
+			RB.GetComponent<CapsuleCollider>().material = slipperyMaterial;
 			RB.AddForce(Vector3.up*jump,ForceMode.Impulse);
 			onGround = false;
 		}
@@ -84,6 +106,8 @@ public class PlayerMovement : MonoBehaviour {
 		{
 			onGround = true;
 		}
+
+		
 	}
 
 	private void OnTriggerEnter(Collider other)
@@ -92,19 +116,31 @@ public class PlayerMovement : MonoBehaviour {
 		if (other.CompareTag("Ground"))
 		{
 			onGround = true;
+			canMove = true;
+			RB.GetComponent<CapsuleCollider>().material = null;
+
 		}
+
 		if (other.CompareTag("Side"))
 		{
-			//set velocity to 0??
-			//RB.velocity = new Vector3(0,RB.velocity.y,0);
 			canMove = false;
-			Debug.Log("hit side");
 		}
-	}
-
-	private void OnTriggerExit(Collider other)
-	{
-		canMove = true;
+		if (other.gameObject.CompareTag("Hazard"))
+		{
+			float dir;
+			if (faceRight)
+			{
+				dir = 1;
+			}
+			else
+			{
+				dir = -1;
+			}
+			//If you hit hazard, it hits you w a force opposite of your current velocity
+			RB.AddForce(new Vector3(transform.position.x-other.GetComponent<Transform>().position.x, RB.transform.position.y - other.GetComponent<Transform>().position.y,0f), ForceMode.Impulse);
+			
+			canMove = false;
+		}
 	}
 
 	/*private void OnTriggerStay(Collider other)
