@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d62d82b-9b8b-4f74-b773-a24adfca4306" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Midterm Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Midterm Project/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Midterm Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Midterm Project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
     </list>
@@ -17,11 +17,12 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="3" />
+          <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -36,12 +37,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="5346" />
+          <entry key="cs" value="5548" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="5346" />
+          <entry key="C#" value="5548" />
         </counts>
       </usages-collector>
     </session>
@@ -51,37 +52,38 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
+            <state relative-caret-position="225">
+              <caret line="68" column="60" selection-start-line="68" selection-start-column="60" selection-end-line="68" selection-end-column="60" />
               <folding>
-                <marker date="1538668989000" expanded="false" signature="6:78" ph="..." />
-                <marker date="1538668989000" expanded="true" signature="80:228" ph="/* Moves players along X and Y axises(?) ... */" />
-                <marker date="1538668989000" expanded="true" signature="273:3456" ph="{...}" />
-                <marker date="1538668989000" expanded="true" signature="536:576" ph="{...}" />
-                <marker date="1538668989000" expanded="true" signature="629:918" ph="{...}" />
-                <marker date="1538668989000" expanded="true" signature="885:912" ph="{...}" />
-                <marker date="1538668989000" expanded="true" signature="948:2371" ph="{...}" />
-                <marker date="1538668989000" expanded="true" signature="954:1077" ph="/* can use coded acceleration!!! &lt; figure out later ... */" />
-                <marker date="1538668989000" expanded="true" signature="1139:1602" ph="{...}" />
-                <marker date="1538668989000" expanded="true" signature="1362:1458" ph="{...}" />
-                <marker date="1538668989000" expanded="true" signature="1491:1524" ph="{...}" />
-                <marker date="1538668989000" expanded="true" signature="1561:1593" ph="{...}" />
-                <marker date="1538668989000" expanded="true" signature="1679:1965" ph="{...}" />
-                <marker date="1538668989000" expanded="true" signature="1687:1802" ph="/* Negate X velocity to make guy stop ... */" />
-                <marker date="1538668989000" expanded="true" signature="1881:1960" ph="/* RB.velocity = Vector3.right * -RB.velocity.x; ... */" />
-                <marker date="1538668989000" expanded="true" signature="2011:2235" ph="{...}" />
-                <marker date="1538668989000" expanded="true" signature="2019:2159" ph="/* try adding velocity directly for jump ... */" />
-                <marker date="1538668989000" expanded="true" signature="2253:2367" ph="{...}" />
-                <marker date="1538668989000" expanded="true" signature="2261:2328" ph="/* makes jumping a little more comfortable ... */" />
-                <marker date="1538668989000" expanded="true" signature="2420:2570" ph="{...}" />
-                <marker date="1538668989000" expanded="true" signature="2535:2563" ph="{...}" />
-                <marker date="1538668989000" expanded="true" signature="2616:3237" ph="{...}" />
-                <marker date="1538668989000" expanded="true" signature="2696:2743" ph="{...}" />
-                <marker date="1538668989000" expanded="true" signature="2776:2804" ph="{...}" />
-                <marker date="1538668989000" expanded="true" signature="2849:3234" ph="{...}" />
-                <marker date="1538668989000" expanded="true" signature="2885:2908" ph="{...}" />
-                <marker date="1538668989000" expanded="true" signature="2916:2940" ph="{...}" />
-                <marker date="1538668989000" expanded="true" signature="3240:3454" ph="/* private void OnTriggerStay(Collider other) ... */" />
+                <marker date="1538701652000" expanded="false" signature="6:78" ph="..." />
+                <marker date="1538701652000" expanded="true" signature="80:228" ph="/* Moves players along X and Y axises(?) ... */" />
+                <marker date="1538701652000" expanded="true" signature="273:3488" ph="{...}" />
+                <marker date="1538701652000" expanded="true" signature="562:602" ph="{...}" />
+                <marker date="1538701652000" expanded="true" signature="655:929" ph="{...}" />
+                <marker date="1538701652000" expanded="true" signature="911:923" ph="{...}" />
+                <marker date="1538701652000" expanded="true" signature="959:2389" ph="{...}" />
+                <marker date="1538701652000" expanded="true" signature="965:1088" ph="/* can use coded acceleration!!! &lt; figure out later ... */" />
+                <marker date="1538701652000" expanded="true" signature="1141:1604" ph="{...}" />
+                <marker date="1538701652000" expanded="true" signature="1364:1460" ph="{...}" />
+                <marker date="1538701652000" expanded="true" signature="1493:1526" ph="{...}" />
+                <marker date="1538701652000" expanded="true" signature="1563:1595" ph="{...}" />
+                <marker date="1538701652000" expanded="true" signature="1671:1915" ph="{...}" />
+                <marker date="1538701652000" expanded="true" signature="1679:1752" ph="/* Negate X velocity to make guy stop ... */" />
+                <marker date="1538701652000" expanded="true" signature="1831:1910" ph="/* RB.velocity = Vector3.right * -RB.velocity.x; ... */" />
+                <marker date="1538701652000" expanded="true" signature="1961:2253" ph="{...}" />
+                <marker date="1538701652000" expanded="true" signature="1969:2109" ph="/* try adding velocity directly for jump ... */" />
+                <marker date="1538701652000" expanded="true" signature="2271:2385" ph="{...}" />
+                <marker date="1538701652000" expanded="true" signature="2279:2346" ph="/* makes jumping a little more comfortable ... */" />
+                <marker date="1538701652000" expanded="true" signature="2438:2588" ph="{...}" />
+                <marker date="1538701652000" expanded="true" signature="2553:2581" ph="{...}" />
+                <marker date="1538701652000" expanded="true" signature="2634:3331" ph="{...}" />
+                <marker date="1538701652000" expanded="true" signature="2714:2798" ph="{...}" />
+                <marker date="1538701652000" expanded="true" signature="2831:2913" ph="{...}" />
+                <marker date="1538701652000" expanded="true" signature="2958:3328" ph="{...}" />
+                <marker date="1538701652000" expanded="true" signature="2994:3017" ph="{...}" />
+                <marker date="1538701652000" expanded="true" signature="3025:3049" ph="{...}" />
+                <marker date="1538701652000" expanded="true" signature="3376:3486" ph="{...}" />
+                <marker date="1538701652000" expanded="true" signature="3411:3483" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -154,6 +156,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>slipper</find>
+      <find>canmove</find>
+      <find>0.0</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -182,23 +191,21 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="257" />
-    <option name="y" value="22" />
-    <option name="width" value="1023" />
-    <option name="height" value="664" />
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectView">
     <navigator currentView="UnityExplorer" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="FileSystemExplorer" />
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
       </pane>
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -248,11 +255,12 @@
       <workItem from="1538417490300" duration="5756000" />
       <workItem from="1538451693216" duration="4383000" />
       <workItem from="1538662464932" duration="5384000" />
+      <workItem from="1538699949699" duration="1453000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16294000" />
+    <option name="totallyTimeSpent" value="17747000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -267,7 +275,7 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.092084005" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09289176" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -312,20 +320,48 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../instaVR/Assets/VRTK/Scripts/Interactions/Highlighters/VRTK_MaterialColorSwapHighlighter.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/TimeKeeper.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+        <state relative-caret-position="225">
+          <caret line="68" column="60" selection-start-line="68" selection-start-column="60" selection-end-line="68" selection-end-column="60" />
           <folding>
-            <marker date="1538484651000" expanded="true" signature="6:100" ph="..." />
-            <marker date="1538484651000" expanded="true" signature="208:912" ph="{...}" />
-            <marker date="1538484651000" expanded="true" signature="317:392" ph="{...}" />
-            <marker date="1538484651000" expanded="true" signature="447:454" ph="{...}" />
-            <marker date="1538484651000" expanded="true" signature="507:709" ph="{...}" />
-            <marker date="1538484651000" expanded="true" signature="562:684" ph="{...}" />
-            <marker date="1538484651000" expanded="true" signature="792:910" ph="{...}" />
-            <marker date="1538484651000" expanded="true" signature="840:907" ph="{...}" />
+            <marker date="1538701652000" expanded="false" signature="6:78" ph="..." />
+            <marker date="1538701652000" expanded="true" signature="80:228" ph="/* Moves players along X and Y axises(?) ... */" />
+            <marker date="1538701652000" expanded="true" signature="273:3488" ph="{...}" />
+            <marker date="1538701652000" expanded="true" signature="562:602" ph="{...}" />
+            <marker date="1538701652000" expanded="true" signature="655:929" ph="{...}" />
+            <marker date="1538701652000" expanded="true" signature="911:923" ph="{...}" />
+            <marker date="1538701652000" expanded="true" signature="959:2389" ph="{...}" />
+            <marker date="1538701652000" expanded="true" signature="965:1088" ph="/* can use coded acceleration!!! &lt; figure out later ... */" />
+            <marker date="1538701652000" expanded="true" signature="1141:1604" ph="{...}" />
+            <marker date="1538701652000" expanded="true" signature="1364:1460" ph="{...}" />
+            <marker date="1538701652000" expanded="true" signature="1493:1526" ph="{...}" />
+            <marker date="1538701652000" expanded="true" signature="1563:1595" ph="{...}" />
+            <marker date="1538701652000" expanded="true" signature="1671:1915" ph="{...}" />
+            <marker date="1538701652000" expanded="true" signature="1679:1752" ph="/* Negate X velocity to make guy stop ... */" />
+            <marker date="1538701652000" expanded="true" signature="1831:1910" ph="/* RB.velocity = Vector3.right * -RB.velocity.x; ... */" />
+            <marker date="1538701652000" expanded="true" signature="1961:2253" ph="{...}" />
+            <marker date="1538701652000" expanded="true" signature="1969:2109" ph="/* try adding velocity directly for jump ... */" />
+            <marker date="1538701652000" expanded="true" signature="2271:2385" ph="{...}" />
+            <marker date="1538701652000" expanded="true" signature="2279:2346" ph="/* makes jumping a little more comfortable ... */" />
+            <marker date="1538701652000" expanded="true" signature="2438:2588" ph="{...}" />
+            <marker date="1538701652000" expanded="true" signature="2553:2581" ph="{...}" />
+            <marker date="1538701652000" expanded="true" signature="2634:3331" ph="{...}" />
+            <marker date="1538701652000" expanded="true" signature="2714:2798" ph="{...}" />
+            <marker date="1538701652000" expanded="true" signature="2831:2913" ph="{...}" />
+            <marker date="1538701652000" expanded="true" signature="2958:3328" ph="{...}" />
+            <marker date="1538701652000" expanded="true" signature="2994:3017" ph="{...}" />
+            <marker date="1538701652000" expanded="true" signature="3025:3049" ph="{...}" />
+            <marker date="1538701652000" expanded="true" signature="3376:3486" ph="{...}" />
+            <marker date="1538701652000" expanded="true" signature="3411:3483" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RaycastAndInstantiate/Assets/Scripts/RaycastGrounded.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -362,46 +398,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../RaycastAndInstantiate/Assets/Scripts/RaycastGrounded.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/TimeKeeper.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
+        <state relative-caret-position="465">
+          <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
           <folding>
-            <marker date="1538668989000" expanded="false" signature="6:78" ph="..." />
-            <marker date="1538668989000" expanded="true" signature="80:228" ph="/* Moves players along X and Y axises(?) ... */" />
-            <marker date="1538668989000" expanded="true" signature="273:3456" ph="{...}" />
-            <marker date="1538668989000" expanded="true" signature="536:576" ph="{...}" />
-            <marker date="1538668989000" expanded="true" signature="629:918" ph="{...}" />
-            <marker date="1538668989000" expanded="true" signature="885:912" ph="{...}" />
-            <marker date="1538668989000" expanded="true" signature="948:2371" ph="{...}" />
-            <marker date="1538668989000" expanded="true" signature="954:1077" ph="/* can use coded acceleration!!! &lt; figure out later ... */" />
-            <marker date="1538668989000" expanded="true" signature="1139:1602" ph="{...}" />
-            <marker date="1538668989000" expanded="true" signature="1362:1458" ph="{...}" />
-            <marker date="1538668989000" expanded="true" signature="1491:1524" ph="{...}" />
-            <marker date="1538668989000" expanded="true" signature="1561:1593" ph="{...}" />
-            <marker date="1538668989000" expanded="true" signature="1679:1965" ph="{...}" />
-            <marker date="1538668989000" expanded="true" signature="1687:1802" ph="/* Negate X velocity to make guy stop ... */" />
-            <marker date="1538668989000" expanded="true" signature="1881:1960" ph="/* RB.velocity = Vector3.right * -RB.velocity.x; ... */" />
-            <marker date="1538668989000" expanded="true" signature="2011:2235" ph="{...}" />
-            <marker date="1538668989000" expanded="true" signature="2019:2159" ph="/* try adding velocity directly for jump ... */" />
-            <marker date="1538668989000" expanded="true" signature="2253:2367" ph="{...}" />
-            <marker date="1538668989000" expanded="true" signature="2261:2328" ph="/* makes jumping a little more comfortable ... */" />
-            <marker date="1538668989000" expanded="true" signature="2420:2570" ph="{...}" />
-            <marker date="1538668989000" expanded="true" signature="2535:2563" ph="{...}" />
-            <marker date="1538668989000" expanded="true" signature="2616:3237" ph="{...}" />
-            <marker date="1538668989000" expanded="true" signature="2696:2743" ph="{...}" />
-            <marker date="1538668989000" expanded="true" signature="2776:2804" ph="{...}" />
-            <marker date="1538668989000" expanded="true" signature="2849:3234" ph="{...}" />
-            <marker date="1538668989000" expanded="true" signature="2885:2908" ph="{...}" />
-            <marker date="1538668989000" expanded="true" signature="2916:2940" ph="{...}" />
-            <marker date="1538668989000" expanded="true" signature="3240:3454" ph="/* private void OnTriggerStay(Collider other) ... */" />
+            <marker date="1538484651000" expanded="true" signature="6:100" ph="..." />
+            <marker date="1538484651000" expanded="true" signature="208:912" ph="{...}" />
+            <marker date="1538484651000" expanded="true" signature="317:392" ph="{...}" />
+            <marker date="1538484651000" expanded="true" signature="447:454" ph="{...}" />
+            <marker date="1538484651000" expanded="true" signature="507:709" ph="{...}" />
+            <marker date="1538484651000" expanded="true" signature="562:684" ph="{...}" />
+            <marker date="1538484651000" expanded="true" signature="792:910" ph="{...}" />
+            <marker date="1538484651000" expanded="true" signature="840:907" ph="{...}" />
           </folding>
         </state>
       </provider>

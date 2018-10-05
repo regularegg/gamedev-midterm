@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour {
 	private Rigidbody RB;
 	private Vector3 inputVector;
 
-	private bool faceRight, onGround = true, canMove = true, keyPressed;
+	private bool faceRight, onGround = true, keyPressed;
 
 	public float moveSpeed = 10f;
 	public float jump = 100f;
@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour {
 		
 		if (Mathf.Abs((RB.velocity.x))<0.01f)
 		{
-			canMove = true;
+			
 		}
 		
 	}
@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		//can use coded acceleration!!! < figure out later
 		//if ((Input.GetKey(KeyCode.A) || Input.GetKey((KeyCode.D)))&&canMove)
-		if ((Mathf.Abs(Input.GetAxis("Horizontal"))>0.1f)&&canMove)
+		if ((Mathf.Abs(Input.GetAxis("Horizontal"))>0.1f))
 		{
 			//cha9nge velocity to make guy move
 			RB.AddForce(inputVector);
@@ -66,15 +66,14 @@ public class PlayerMovement : MonoBehaviour {
 
 			
 		}
-		else if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D)&&onGround)
+		else if ((Mathf.Abs(Input.GetAxis("Horizontal"))<0.01f)&&onGround)
 		{
 			//Negate X velocity to make guy stop
 			//Really weird w/ jumps right now
-			//maybe lerp for more realistic stop??
 			
-			RB.velocity = Vector3.right * Mathf.Lerp(RB.velocity.y,0,0.1f);
+			//RB.velocity = Vector3.right * Mathf.Lerp(RB.velocity.x,0,0.1f);
 			
-			//RB.velocity = Vector3.right * -RB.velocity.x;
+			RB.velocity = Vector3.right * -RB.velocity.x+new Vector3(0,RB.velocity.y,0);
 			//RB.AddForce(-RB.velocity);
 
 		}
@@ -116,14 +115,13 @@ public class PlayerMovement : MonoBehaviour {
 		if (other.CompareTag("Ground"))
 		{
 			onGround = true;
-			canMove = true;
 			RB.GetComponent<CapsuleCollider>().material = null;
 
 		}
 
 		if (other.CompareTag("Side"))
 		{
-			canMove = false;
+			other.GetComponentInParent<BoxCollider>().material = slipperyMaterial;
 		}
 		if (other.gameObject.CompareTag("Hazard"))
 		{
@@ -137,20 +135,17 @@ public class PlayerMovement : MonoBehaviour {
 				dir = -1;
 			}
 			//If you hit hazard, it hits you w a force opposite of your current velocity
-			RB.AddForce(new Vector3(transform.position.x-other.GetComponent<Transform>().position.x, RB.transform.position.y - other.GetComponent<Transform>().position.y,0f), ForceMode.Impulse);
+			RB.AddForce(new Vector3(transform.position.x-other.GetComponent<Transform>().position.x, 
+				RB.transform.position.y - other.GetComponent<Transform>().position.y,0f), ForceMode.Impulse);
 			
-			canMove = false;
 		}
 	}
 
-	/*private void OnTriggerStay(Collider other)
+	private void OnTriggerExit(Collider other)
 	{
 		if (other.CompareTag("Side"))
 		{
-			//set velocity to 0??
-			//RB.velocity = new Vector3(0,RB.velocity.y,0);
-			canMove = false;
-			Debug.Log("hit side");
+			//other.GetComponentInParent<BoxCollider>().material = null;
 		}
-	}*/
+	}
 }
