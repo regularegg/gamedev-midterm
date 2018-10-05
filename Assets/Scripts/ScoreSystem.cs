@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class ScoreSystem : MonoBehaviour
 {
 	//destinations keeps track of which sites were visited to distribute pictures at end of game
-	public bool[] destinations;
+	//public bool[] destinations;
 	public Text ScoreDisplay;
 	
 	private int currentDestination, score;
@@ -29,10 +29,10 @@ public class ScoreSystem : MonoBehaviour
 		{
 			//take pic code
 			//should make code to "deactivate" scenic point
-			destinations[currentDestination] = true;
+			ScoreKeeper.Destinations[currentDestination] = true;
 			score++;
 			ScoreDisplay.text = "Score: " + score;
-			destinations[currentDestination] = true;
+			ScoreKeeper.Destinations[currentDestination] = true;
 			Debug.Log("Took pic!!!");
 			otherObject.GetComponent<MeshRenderer>().enabled = false;
 			otherObject.GetComponent<Collider>().enabled = false;

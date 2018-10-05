@@ -7,6 +7,7 @@
         <e p="Scripts" t="Include">
           <e p="GameOverDisplay.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
+          <e p="ScoreKeeper.cs" t="Include" />
           <e p="ScoreSystem.cs" t="Include" />
           <e p="TimeKeeper.cs" t="Include" />
         </e>

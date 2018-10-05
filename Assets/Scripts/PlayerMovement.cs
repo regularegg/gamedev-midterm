@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour {
 		//if ((Input.GetKey(KeyCode.A) || Input.GetKey((KeyCode.D)))&&canMove)
 		if ((Mathf.Abs(Input.GetAxis("Horizontal"))>0.1f))
 		{
-			//cha9nge velocity to make guy move
+			//change velocity to make guy move
 			RB.AddForce(inputVector);
 			
 			//if velocity.x exceeds maxspeed, change artificially edit velocity.x to maxspeed
@@ -73,7 +73,9 @@ public class PlayerMovement : MonoBehaviour {
 			
 			//RB.velocity = Vector3.right * Mathf.Lerp(RB.velocity.x,0,0.1f);
 			
-			RB.velocity = Vector3.right * -RB.velocity.x+new Vector3(0,RB.velocity.y,0);
+			//RB.velocity = Vector3.right * -RB.velocity.x+new Vector3(0,RB.velocity.y,0);
+			RB.velocity = new Vector3(0,RB.velocity.y,0);
+
 			//RB.AddForce(-RB.velocity);
 
 		}
@@ -135,8 +137,7 @@ public class PlayerMovement : MonoBehaviour {
 				dir = -1;
 			}
 			//If you hit hazard, it hits you w a force opposite of your current velocity
-			RB.AddForce(new Vector3(transform.position.x-other.GetComponent<Transform>().position.x, 
-				RB.transform.position.y - other.GetComponent<Transform>().position.y,0f), ForceMode.Impulse);
+			
 			
 		}
 	}
