@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour {
 			//if velocity.x exceeds maxspeed, change artificially edit velocity.x to maxspeed
 			if ((RB.velocity.x > maxSpeed)||(RB.velocity.x<-maxSpeed))
 			{
-				RB.velocity = new Vector3(maxSpeed*Input.GetAxis("Horizontal"),RB.velocity.y,0f);
+				RB.velocity = new Vector3(maxSpeed * Input.GetAxis("Horizontal"), RB.velocity.y, 0f);
 			}
 
 			if (Input.GetKey(KeyCode.A))
@@ -74,6 +74,7 @@ public class PlayerMovement : MonoBehaviour {
 			//RB.velocity = Vector3.right * Mathf.Lerp(RB.velocity.x,0,0.1f);
 			
 			//RB.velocity = Vector3.right * -RB.velocity.x+new Vector3(0,RB.velocity.y,0);
+			
 			RB.velocity = new Vector3(0,RB.velocity.y,0);
 
 			//RB.AddForce(-RB.velocity);
@@ -149,4 +150,5 @@ public class PlayerMovement : MonoBehaviour {
 			//other.GetComponentInParent<BoxCollider>().material = null;
 		}
 	}
+
 }
