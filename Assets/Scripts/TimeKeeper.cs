@@ -1,24 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 //keeps track of time and time penalty when hit by enemies/hazards
 public class TimeKeeper : MonoBehaviour
 {
 	public Text timeDisplay;
-	public int time = 60, penalty;
+	public int penalty;
+
+	private int Time;
+	public int time
+	{
+		get { return Time; }
+		set
+		{
+			Time = value;
+			if (value <= 0)
+			{
+				SceneManager.LoadScene("GameOver");
+			}
+		}
+	}
 	
 	// Use this for initialization
 	void Start ()
 	{
+		time = 60;
 		timeDisplay.text = "Time: " + time;
 		StartCoroutine(Countdown());
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 
 	//counts down the seconds
@@ -32,7 +43,6 @@ public class TimeKeeper : MonoBehaviour
 			timeDisplay.text = "Time: " + time;
 			yield return new WaitForSeconds(1);
 		}
-
 		yield return null;
 	}
 

@@ -15,6 +15,8 @@ public class ScoreSystem : MonoBehaviour
 	private bool canTakePic;
 	private GameObject otherObject;
 
+	private string tempName;
+
 	// Use this for initialization
 	void Start()
 	{
@@ -36,6 +38,7 @@ public class ScoreSystem : MonoBehaviour
 			Debug.Log("Took pic!!!");
 			otherObject.GetComponent<MeshRenderer>().enabled = false;
 			otherObject.GetComponent<Collider>().enabled = false;
+			ScoreKeeper.Destinations[int.Parse(otherObject.name)] = true;
 		}
 	}
 
