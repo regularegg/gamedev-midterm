@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d62d82b-9b8b-4f74-b773-a24adfca4306" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TimeKeeper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TimeKeeper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="0d62d82b-9b8b-4f74-b773-a24adfca4306" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +12,7 @@
     <session id="955522360">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.17" value="1" />
@@ -40,12 +35,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="6454" />
+          <entry key="cs" value="6539" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="6454" />
+          <entry key="C#" value="6539" />
         </counts>
       </usages-collector>
     </session>
@@ -70,23 +65,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/ScoreSystem.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="40" column="40" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="40" />
+              <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
               <folding>
-                <marker date="1539232139000" expanded="false" signature="6:140" ph="..." />
-                <marker date="1539232139000" expanded="true" signature="199:1705" ph="{...}" />
-                <marker date="1539232139000" expanded="true" signature="203:326" ph="/* destinations keeps track of which sites were visited to distribute pictures at end of game ... */" />
-                <marker date="1539232139000" expanded="true" signature="528:588" ph="{...}" />
-                <marker date="1539232139000" expanded="true" signature="640:1149" ph="{...}" />
-                <marker date="1539232139000" expanded="true" signature="696:1146" ph="{...}" />
-                <marker date="1539232139000" expanded="true" signature="704:770" ph="/* take pic code ... */" />
-                <marker date="1539232139000" expanded="true" signature="1195:1438" ph="{...}" />
-                <marker date="1539232139000" expanded="true" signature="1276:1435" ph="{...}" />
-                <marker date="1539232139000" expanded="true" signature="1483:1703" ph="{...}" />
-                <marker date="1539232139000" expanded="true" signature="1584:1700" ph="{...}" />
+                <marker date="1539232160000" expanded="false" signature="6:140" ph="..." />
+                <marker date="1539232160000" expanded="true" signature="199:1711" ph="{...}" />
+                <marker date="1539232160000" expanded="true" signature="203:326" ph="/* destinations keeps track of which sites were visited to distribute pictures at end of game ... */" />
+                <marker date="1539232160000" expanded="true" signature="528:588" ph="{...}" />
+                <marker date="1539232160000" expanded="true" signature="640:1155" ph="{...}" />
+                <marker date="1539232160000" expanded="true" signature="696:1152" ph="{...}" />
+                <marker date="1539232160000" expanded="true" signature="704:770" ph="/* take pic code ... */" />
+                <marker date="1539232160000" expanded="true" signature="1201:1444" ph="{...}" />
+                <marker date="1539232160000" expanded="true" signature="1282:1441" ph="{...}" />
+                <marker date="1539232160000" expanded="true" signature="1489:1709" ph="{...}" />
+                <marker date="1539232160000" expanded="true" signature="1590:1706" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -105,17 +100,18 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameOverDisplay.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="24" column="68" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="68" />
+            <state relative-caret-position="90">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding>
-                <marker date="1538704288000" expanded="false" signature="6:100" ph="..." />
-                <marker date="1538704288000" expanded="true" signature="146:659" ph="{...}" />
-                <marker date="1538704288000" expanded="true" signature="413:657" ph="{...}" />
-                <marker date="1538704288000" expanded="true" signature="459:590" ph="{...}" />
-                <marker date="1538704288000" expanded="true" signature="499:586" ph="{...}" />
+                <marker date="1539232303000" expanded="false" signature="6:100" ph="..." />
+                <marker date="1539232303000" expanded="true" signature="146:756" ph="{...}" />
+                <marker date="1539232303000" expanded="true" signature="434:754" ph="{...}" />
+                <marker date="1539232303000" expanded="true" signature="480:687" ph="{...}" />
+                <marker date="1539232303000" expanded="true" signature="520:607" ph="{...}" />
+                <marker date="1539232303000" expanded="true" signature="615:683" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -167,10 +163,10 @@
       <list>
         <option value="$PROJECT_DIR$/../RaycastAndInstantiate/Assets/Scripts/RaycastGrounded.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScoreKeeper.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameOverDisplay.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TimeKeeper.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScoreSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameOverDisplay.cs" />
       </list>
     </option>
   </component>
@@ -247,12 +243,12 @@
       <workItem from="1538662464932" duration="5384000" />
       <workItem from="1538699949699" duration="3868000" />
       <workItem from="1539191055149" duration="733000" />
-      <workItem from="1539230586408" duration="925000" />
+      <workItem from="1539230586408" duration="1281000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21820000" />
+    <option name="totallyTimeSpent" value="22176000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -326,20 +322,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameOverDisplay.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="24" column="68" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="68" />
-          <folding>
-            <marker date="1538704288000" expanded="false" signature="6:100" ph="..." />
-            <marker date="1538704288000" expanded="true" signature="146:659" ph="{...}" />
-            <marker date="1538704288000" expanded="true" signature="413:657" ph="{...}" />
-            <marker date="1538704288000" expanded="true" signature="459:590" ph="{...}" />
-            <marker date="1538704288000" expanded="true" signature="499:586" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/TimeKeeper.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="389">
@@ -373,19 +355,34 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/ScoreSystem.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="40" column="40" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="40" />
+          <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
           <folding>
-            <marker date="1539232139000" expanded="false" signature="6:140" ph="..." />
-            <marker date="1539232139000" expanded="true" signature="199:1705" ph="{...}" />
-            <marker date="1539232139000" expanded="true" signature="203:326" ph="/* destinations keeps track of which sites were visited to distribute pictures at end of game ... */" />
-            <marker date="1539232139000" expanded="true" signature="528:588" ph="{...}" />
-            <marker date="1539232139000" expanded="true" signature="640:1149" ph="{...}" />
-            <marker date="1539232139000" expanded="true" signature="696:1146" ph="{...}" />
-            <marker date="1539232139000" expanded="true" signature="704:770" ph="/* take pic code ... */" />
-            <marker date="1539232139000" expanded="true" signature="1195:1438" ph="{...}" />
-            <marker date="1539232139000" expanded="true" signature="1276:1435" ph="{...}" />
-            <marker date="1539232139000" expanded="true" signature="1483:1703" ph="{...}" />
-            <marker date="1539232139000" expanded="true" signature="1584:1700" ph="{...}" />
+            <marker date="1539232160000" expanded="false" signature="6:140" ph="..." />
+            <marker date="1539232160000" expanded="true" signature="199:1711" ph="{...}" />
+            <marker date="1539232160000" expanded="true" signature="203:326" ph="/* destinations keeps track of which sites were visited to distribute pictures at end of game ... */" />
+            <marker date="1539232160000" expanded="true" signature="528:588" ph="{...}" />
+            <marker date="1539232160000" expanded="true" signature="640:1155" ph="{...}" />
+            <marker date="1539232160000" expanded="true" signature="696:1152" ph="{...}" />
+            <marker date="1539232160000" expanded="true" signature="704:770" ph="/* take pic code ... */" />
+            <marker date="1539232160000" expanded="true" signature="1201:1444" ph="{...}" />
+            <marker date="1539232160000" expanded="true" signature="1282:1441" ph="{...}" />
+            <marker date="1539232160000" expanded="true" signature="1489:1709" ph="{...}" />
+            <marker date="1539232160000" expanded="true" signature="1590:1706" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameOverDisplay.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding>
+            <marker date="1539232303000" expanded="false" signature="6:100" ph="..." />
+            <marker date="1539232303000" expanded="true" signature="146:756" ph="{...}" />
+            <marker date="1539232303000" expanded="true" signature="434:754" ph="{...}" />
+            <marker date="1539232303000" expanded="true" signature="480:687" ph="{...}" />
+            <marker date="1539232303000" expanded="true" signature="520:607" ph="{...}" />
+            <marker date="1539232303000" expanded="true" signature="615:683" ph="{...}" />
           </folding>
         </state>
       </provider>
