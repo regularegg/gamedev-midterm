@@ -12,9 +12,9 @@ public class PlayerMovement : MonoBehaviour {
 
 	private bool faceRight, onGround = true, keyPressed;
 
-	public float moveSpeed = 10f;
-	public float jump = 100f;
-	public float maxSpeed = 2f;
+	public float moveSpeed = 2f;
+	public float jump = 50f;
+	public float maxSpeed = 1.5f;
 
 	public PhysicMaterial slipperyMaterial;
 	
@@ -96,7 +96,7 @@ public class PlayerMovement : MonoBehaviour {
 		{
 			//makes jumping a little more comfortable
 			//accelerates falling 
-			RB.AddForce(Vector3.down*0.5f);
+			RB.AddForce(Vector3.down);
 		}
 
 	}

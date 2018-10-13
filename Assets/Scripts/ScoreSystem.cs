@@ -33,7 +33,8 @@ public class ScoreSystem : MonoBehaviour
 			//should make code to "deactivate" scenic point
 			ScoreKeeper.Destinations[currentDestination] = true;
 			score++;
-			ScoreDisplay.text = "Score: " + score;
+			int scoreLeft = 5 - score;
+			ScoreDisplay.text = "Pics left to take: " + scoreLeft;
 			ScoreKeeper.Destinations[currentDestination] = true;
 			Debug.Log("Took pic!!!");
 			otherObject.GetComponent<MeshRenderer>().enabled = false;
