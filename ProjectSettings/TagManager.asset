@@ -8,6 +8,7 @@ TagManager:
   - CamPoint
   - Hazard
   - Side
+  - LowLimit
   layers:
   - Default
   - TransparentFX

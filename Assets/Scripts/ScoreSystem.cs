@@ -11,7 +11,7 @@ public class ScoreSystem : MonoBehaviour
 	//public bool[] destinations;
 	public Text ScoreDisplay;
 	
-	private int currentDestination, score;
+	private int currentDestination, score, scoreLeft;
 	private bool canTakePic;
 	private GameObject otherObject;
 
@@ -20,8 +20,9 @@ public class ScoreSystem : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
+		scoreLeft = 5 - score;
 		score = 0;
-		ScoreDisplay.text = "Score: " + score;
+		ScoreDisplay.text = "Pics left to take: " + scoreLeft;
 	}
 
 	// Update is called once per frame
@@ -33,11 +34,12 @@ public class ScoreSystem : MonoBehaviour
 			//should make code to "deactivate" scenic point
 			ScoreKeeper.Destinations[currentDestination] = true;
 			score++;
-			int scoreLeft = 5 - score;
+			scoreLeft = 5 - score;
 			ScoreDisplay.text = "Pics left to take: " + scoreLeft;
 			ScoreKeeper.Destinations[currentDestination] = true;
 			Debug.Log("Took pic!!!");
 			otherObject.GetComponent<MeshRenderer>().enabled = false;
+			otherObject.GetComponentInChildren<MeshRenderer>().enabled = false;
 			otherObject.GetComponent<Collider>().enabled = false;
 			ScoreKeeper.Destinations[int.Parse(otherObject.name)] = true;
 		}

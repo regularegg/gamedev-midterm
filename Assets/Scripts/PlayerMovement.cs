@@ -1,22 +1,50 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //Moves players along X and Y axises(?) 
 // Goal of the game is to take pictures at x amount of locations before
 // "timer" (phone battery) runs out
 public class PlayerMovement : MonoBehaviour {
 
-	private Rigidbody RB;
-	private Vector3 inputVector;
-
-	private bool faceRight, onGround = true, keyPressed;
-
 	public float moveSpeed = 2f;
 	public float jump = 50f;
 	public float maxSpeed = 1.5f;
-
 	public PhysicMaterial slipperyMaterial;
+	public GameObject playerModel;
+	
+	private Rigidbody RB;
+	private Vector3 inputVector;
+
+
+	private bool faceRight = true, onGround = true, keyPressed;
+
+	public bool FaceRight //Changes rotation of player model to face the direction they are moving in
+	{
+		get { return faceRight; }
+		set
+		{
+			if (value)
+			{
+				//if the value is not the same as current direction, rotate
+				if(!faceRight)
+				playerModel.transform.Rotate(Vector3.up,180,Space.Self);
+				
+				faceRight = value;
+			}
+			else
+			{
+				//if the value is not the same as current direction, rotate
+				if(faceRight)
+				playerModel.transform.Rotate(Vector3.up,180,Space.Self);
+				
+				faceRight = value;
+			}
+		}
+
+	}
+
 	
 	// Use this for initialization
 	void Start ()
@@ -32,12 +60,6 @@ public class PlayerMovement : MonoBehaviour {
 		
 		//inputVector  = transform.up * vertical *  jump;
 		inputVector = transform.right * horizontal *  moveSpeed;
-		
-		if (Mathf.Abs((RB.velocity.x))<0.01f)
-		{
-			
-		}
-		
 	}
 	
 	private void FixedUpdate()
@@ -54,14 +76,16 @@ public class PlayerMovement : MonoBehaviour {
 			{
 				RB.velocity = new Vector3(maxSpeed * Input.GetAxis("Horizontal"), RB.velocity.y, 0f);
 			}
-
+			
+			//When player is moving in a direction, performs check to make sure they are moving in the right direction 
+			//using Get,Set
 			if (Input.GetKey(KeyCode.A))
 			{
-				faceRight = false;
+				FaceRight = false;
 			}
 			else if (Input.GetKey(KeyCode.D))
 			{
-				faceRight = true;
+				FaceRight = true;
 			}
 
 			
@@ -71,13 +95,15 @@ public class PlayerMovement : MonoBehaviour {
 			//Negate X velocity to make guy stop
 			//Really weird w/ jumps right now
 			
-			//RB.velocity = Vector3.right * Mathf.Lerp(RB.velocity.x,0,0.1f);
-			
-			//RB.velocity = Vector3.right * -RB.velocity.x+new Vector3(0,RB.velocity.y,0);
-			
 			RB.velocity = new Vector3(0,RB.velocity.y,0);
-
-			//RB.AddForce(-RB.velocity);
+			if (Input.GetKeyUp(KeyCode.D))
+			{
+				RB.AddForce(-Vector3.right);
+			}
+			else if (Input.GetKeyUp(KeyCode.A))
+			{
+				RB.AddForce(Vector3.right);
+			}
 
 		}
 
@@ -114,41 +140,11 @@ public class PlayerMovement : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other)
 	{
-		//for later when I add the trigger boxes
-		if (other.CompareTag("Ground"))
+		if (other.CompareTag("LowLimit"))
 		{
-			onGround = true;
-			RB.GetComponent<CapsuleCollider>().material = null;
-
-		}
-
-		if (other.CompareTag("Side"))
-		{
-			other.GetComponentInParent<BoxCollider>().material = slipperyMaterial;
-		}
-		if (other.gameObject.CompareTag("Hazard"))
-		{
-			float dir;
-			if (faceRight)
-			{
-				dir = 1;
-			}
-			else
-			{
-				dir = -1;
-			}
-			//If you hit hazard, it hits you w a force opposite of your current velocity
-			
-			
+			SceneManager.LoadScene("Dead");
 		}
 	}
 
-	private void OnTriggerExit(Collider other)
-	{
-		if (other.CompareTag("Side"))
-		{
-			//other.GetComponentInParent<BoxCollider>().material = null;
-		}
-	}
 
 }
