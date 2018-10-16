@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
@@ -20,7 +21,7 @@ public class ScoreSystem : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-		scoreLeft = 5 - score;
+		scoreLeft = 3 - score;
 		score = 0;
 		ScoreDisplay.text = "Pics left to take: " + scoreLeft;
 	}
@@ -34,7 +35,7 @@ public class ScoreSystem : MonoBehaviour
 			//should make code to "deactivate" scenic point
 			ScoreKeeper.Destinations[currentDestination] = true;
 			score++;
-			scoreLeft = 5 - score;
+			scoreLeft = 3 - score;
 			ScoreDisplay.text = "Pics left to take: " + scoreLeft;
 			ScoreKeeper.Destinations[currentDestination] = true;
 			Debug.Log("Took pic!!!");
@@ -42,6 +43,10 @@ public class ScoreSystem : MonoBehaviour
 			otherObject.GetComponentInChildren<MeshRenderer>().enabled = false;
 			otherObject.GetComponent<Collider>().enabled = false;
 			ScoreKeeper.Destinations[int.Parse(otherObject.name)] = true;
+			if (score == 3)
+			{
+				SceneManager.LoadScene("GameOver");
+			}
 		}
 	}
 

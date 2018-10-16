@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d62d82b-9b8b-4f74-b773-a24adfca4306" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Midterm Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Midterm Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/bad.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/bad.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +53,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -104,7 +101,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/ScoreSystem.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="555">
@@ -321,12 +318,12 @@
       <workItem from="1539266896396" duration="1430000" />
       <workItem from="1539367103762" duration="4809000" />
       <workItem from="1539540471628" duration="1120000" />
-      <workItem from="1539662683344" duration="1133000" />
+      <workItem from="1539662683344" duration="1312000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30668000" />
+    <option name="totallyTimeSpent" value="30847000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -397,26 +394,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ScoreSystem.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="41" column="79" selection-start-line="41" selection-start-column="79" selection-end-line="41" selection-end-column="79" />
-          <folding>
-            <marker date="1539458228000" expanded="false" signature="6:140" ph="..." />
-            <marker date="1539458228000" expanded="true" signature="199:1876" ph="{...}" />
-            <marker date="1539458228000" expanded="true" signature="203:326" ph="/* destinations keeps track of which sites were visited to distribute pictures at end of game ... */" />
-            <marker date="1539458228000" expanded="true" signature="539:640" ph="{...}" />
-            <marker date="1539458228000" expanded="true" signature="692:1320" ph="{...}" />
-            <marker date="1539458228000" expanded="true" signature="748:1317" ph="{...}" />
-            <marker date="1539458228000" expanded="true" signature="756:822" ph="/* take pic code ... */" />
-            <marker date="1539458228000" expanded="true" signature="1366:1609" ph="{...}" />
-            <marker date="1539458228000" expanded="true" signature="1447:1606" ph="{...}" />
-            <marker date="1539458228000" expanded="true" signature="1654:1874" ph="{...}" />
-            <marker date="1539458228000" expanded="true" signature="1755:1871" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -530,6 +507,26 @@
             <marker date="1539664567000" expanded="true" signature="3449:3477" ph="{...}" />
             <marker date="1539664567000" expanded="true" signature="3530:3615" ph="{...}" />
             <marker date="1539664567000" expanded="true" signature="3569:3612" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ScoreSystem.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="41" column="79" selection-start-line="41" selection-start-column="79" selection-end-line="41" selection-end-column="79" />
+          <folding>
+            <marker date="1539458228000" expanded="false" signature="6:140" ph="..." />
+            <marker date="1539458228000" expanded="true" signature="199:1876" ph="{...}" />
+            <marker date="1539458228000" expanded="true" signature="203:326" ph="/* destinations keeps track of which sites were visited to distribute pictures at end of game ... */" />
+            <marker date="1539458228000" expanded="true" signature="539:640" ph="{...}" />
+            <marker date="1539458228000" expanded="true" signature="692:1320" ph="{...}" />
+            <marker date="1539458228000" expanded="true" signature="748:1317" ph="{...}" />
+            <marker date="1539458228000" expanded="true" signature="756:822" ph="/* take pic code ... */" />
+            <marker date="1539458228000" expanded="true" signature="1366:1609" ph="{...}" />
+            <marker date="1539458228000" expanded="true" signature="1447:1606" ph="{...}" />
+            <marker date="1539458228000" expanded="true" signature="1654:1874" ph="{...}" />
+            <marker date="1539458228000" expanded="true" signature="1755:1871" ph="{...}" />
           </folding>
         </state>
       </provider>
