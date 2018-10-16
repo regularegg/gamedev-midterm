@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour {
 	public float moveSpeed = 2f;
 	public float jump = 50f;
 	public float maxSpeed = 1.5f;
-	public PhysicMaterial slipperyMaterial;
+	public PhysicMaterial slipperyMaterial, grippyMaterial;
 	public GameObject playerModel;
 	
 	private Rigidbody RB;
@@ -98,11 +98,15 @@ public class PlayerMovement : MonoBehaviour {
 			RB.velocity = new Vector3(0,RB.velocity.y,0);
 			if (Input.GetKeyUp(KeyCode.D))
 			{
-				RB.AddForce(-Vector3.right);
+				RB.GetComponent<CapsuleCollider>().material = grippyMaterial;
+
+				//RB.AddForce(-Vector3.right*8);
 			}
 			else if (Input.GetKeyUp(KeyCode.A))
 			{
-				RB.AddForce(Vector3.right);
+				RB.GetComponent<CapsuleCollider>().material = grippyMaterial;
+
+			//	RB.AddForce(Vector3.right*8);
 			}
 
 		}
