@@ -10,8 +10,10 @@ public class TimeKeeper : MonoBehaviour
 	public Text timeDisplay;
 	public int penalty;
 
-	private int Time;
+	//make time changeable by difficulty
+	public int Time;
 	public int time
+	
 	{
 		get { return Time; }
 		set
@@ -27,7 +29,7 @@ public class TimeKeeper : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		time = 60;
+		//time = 60;
 		timeDisplay.text = "Time: " + time;
 		StartCoroutine(Countdown());
 	}
@@ -40,7 +42,7 @@ public class TimeKeeper : MonoBehaviour
 		{
 			Debug.Log("waiting");
 			time--;
-			timeDisplay.text = "Time: " + time;
+			timeDisplay.text = "Seconds Left: " + time;
 			yield return new WaitForSeconds(1);
 		}
 		yield return null;

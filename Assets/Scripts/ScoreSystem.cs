@@ -10,6 +10,7 @@ public class ScoreSystem : MonoBehaviour
 {
 	//destinations keeps track of which sites were visited to distribute pictures at end of game
 	//public bool[] destinations;
+	//canvas scaler - change canvas size
 	public Text ScoreDisplay;
 	
 	private int currentDestination, score, scoreLeft;
@@ -21,7 +22,7 @@ public class ScoreSystem : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-		scoreLeft = 3 - score;
+		scoreLeft = 5 - score;
 		score = 0;
 		ScoreDisplay.text = "Pics left to take: " + scoreLeft;
 	}
@@ -35,15 +36,16 @@ public class ScoreSystem : MonoBehaviour
 			//should make code to "deactivate" scenic point
 			ScoreKeeper.Destinations[currentDestination] = true;
 			score++;
-			scoreLeft = 3 - score;
+			scoreLeft = 5 - score;
 			ScoreDisplay.text = "Pics left to take: " + scoreLeft;
 			ScoreKeeper.Destinations[currentDestination] = true;
 			Debug.Log("Took pic!!!");
 			otherObject.GetComponent<MeshRenderer>().enabled = false;
 			otherObject.GetComponentInChildren<MeshRenderer>().enabled = false;
 			otherObject.GetComponent<Collider>().enabled = false;
+			otherObject.transform.Find("check").GetComponent<MeshRenderer>().enabled = true;
 			ScoreKeeper.Destinations[int.Parse(otherObject.name)] = true;
-			if (score == 3)
+			if (score == 5)
 			{
 				SceneManager.LoadScene("GameOver");
 			}

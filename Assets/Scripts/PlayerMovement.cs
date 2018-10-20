@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		//can use coded acceleration!!! < figure out later
 		//if ((Input.GetKey(KeyCode.A) || Input.GetKey((KeyCode.D)))&&canMove)
-		if ((Mathf.Abs(Input.GetAxis("Horizontal"))>0.1f))
+		if ((Mathf.Abs(Input.GetAxis("Horizontal"))>0.5f))
 		{
 			//change velocity to make guy move
 			RB.AddForce(inputVector);
@@ -90,24 +90,13 @@ public class PlayerMovement : MonoBehaviour {
 
 			
 		}
-		else if ((Mathf.Abs(Input.GetAxis("Horizontal"))<0.01f)&&onGround)
+		else if ((Mathf.Abs(Input.GetAxis("Horizontal"))<0.5f)&&onGround)
 		{
 			//Negate X velocity to make guy stop
 			//Really weird w/ jumps right now
-			
+			Debug.Log("Stop");
 			RB.velocity = new Vector3(0,RB.velocity.y,0);
-			if (Input.GetKeyUp(KeyCode.D))
-			{
-				RB.GetComponent<CapsuleCollider>().material = grippyMaterial;
-
-				//RB.AddForce(-Vector3.right*8);
-			}
-			else if (Input.GetKeyUp(KeyCode.A))
-			{
-				RB.GetComponent<CapsuleCollider>().material = grippyMaterial;
-
-			//	RB.AddForce(Vector3.right*8);
-			}
+			
 
 		}
 
